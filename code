@@ -2,24 +2,15 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-# 1. Load the dataset
-df = pd.read_csv('Data_set_w1A1.csv')
+# FIX: Use read_excel instead of read_csv for .xlsx files
+file_path = '/Users/earltavera/Desktop/MSE803/Data_set_w1A1.xlsx'
+df = pd.read_excel(file_path)
+
+# Proceed with the rest of your code
+print(df.head())
 
 # 2. Descriptive Analysis / Aggregation
-# (In this specific case, the data provided was already aggregated)
+# Since the file you shared earlier was already aggregated, 
+# you can proceed directly to visualization or further summary.
 summary = df.describe()
-
-# 3. Visualization
-sns.set_theme(style="whitegrid")
-fig, ax = plt.subplots(1, 2, figsize=(14, 6))
-
-# Sales Sum Plot
-sns.barplot(x='category', y='sales_sum', data=df, ax=ax[0], palette='viridis')
-ax[0].set_title('Total Sales by Category')
-
-# Quantity Sum Plot
-sns.barplot(x='category', y='quantity_sum', data=df, ax=ax[1], palette='magma')
-ax[1].set_title('Total Quantity Sold by Category')
-
-plt.tight_layout()
-plt.savefig('sales_summary.png')
+print(summary)
