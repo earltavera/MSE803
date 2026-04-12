@@ -1,0 +1,25 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+# 1. Load the dataset
+df = pd.read_csv('Data_set_w1A1.csv')
+
+# 2. Descriptive Analysis / Aggregation
+# (In this specific case, the data provided was already aggregated)
+summary = df.describe()
+
+# 3. Visualization
+sns.set_theme(style="whitegrid")
+fig, ax = plt.subplots(1, 2, figsize=(14, 6))
+
+# Sales Sum Plot
+sns.barplot(x='category', y='sales_sum', data=df, ax=ax[0], palette='viridis')
+ax[0].set_title('Total Sales by Category')
+
+# Quantity Sum Plot
+sns.barplot(x='category', y='quantity_sum', data=df, ax=ax[1], palette='magma')
+ax[1].set_title('Total Quantity Sold by Category')
+
+plt.tight_layout()
+plt.savefig('sales_summary.png')
