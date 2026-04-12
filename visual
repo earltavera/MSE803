@@ -1,0 +1,25 @@
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+# Set visual style
+sns.set_theme(style="whitegrid")
+
+# Create a figure with two subplots
+fig, ax1 = plt.subplots(1, 2, figsize=(14, 6))
+
+# Plot 1: Total Sales per Category
+sns.barplot(x='category', y='sales_sum', data=df, ax=ax1[0], palette='viridis')
+ax1[0].set_title('Total Sales by Category', fontsize=14)
+ax1[0].set_ylabel('Sum of Sales ($)')
+
+# Plot 2: Total Quantity per Category
+sns.barplot(x='category', y='quantity_sum', data=df, ax=ax1[1], palette='magma')
+ax1[1].set_title('Total Quantity Sold by Category', fontsize=14)
+ax1[1].set_ylabel('Sum of Quantity')
+
+plt.tight_layout()
+plt.savefig('sales_summary.png')
+
+# Displaying the summary statistics for the README
+summary_text = df.to_markdown(index=False)
+print(summary_text)
