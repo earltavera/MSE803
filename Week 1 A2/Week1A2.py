@@ -7,7 +7,7 @@ import seaborn as sns
 file_path = '/Users/earltavera/Desktop/MSE803/Week 1 A2/Housing.csv'
 df = pd.read_csv(file_path)
 
-# --- NEW: Check for Missing Data ---
+# ---Check for Missing Data ---
 print("--- Data Integrity Check ---")
 missing_values = df.isnull().sum()
 if missing_values.sum() == 0:
