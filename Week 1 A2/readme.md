@@ -1,4 +1,3 @@
-
 Housing Price Analysis: Decoding Value Beyond Square Footage
 Project Overview
 This project performs a Descriptive Analysis on a housing dataset of 545 properties to identify the key drivers of market value. While property size is a fundamental factor, this study explores how amenities (like Air Conditioning) and location prestige create significant price premiums.
