@@ -1,6 +1,7 @@
 Housing Price Analysis: Decoding Value Beyond Square Footage
 Project Overview
-This project performs a Descriptive Analysis on a housing dataset of 545 properties to identify the key drivers of market value. While property size is a fundamental factor, this study explores how amenities (like Air Conditioning) and location prestige create significant price premiums.
+
+The code is an example of Exploratory Data Analysis (EDA). Specifically, it uses Descriptive Statistics and Data Visualization to identify patterns, detect anomalies, and test hypotheses about what drives housing prices.
 
 Key Findings (The "Story")
 The analysis reveals that housing value is driven by a hierarchy of factors:
