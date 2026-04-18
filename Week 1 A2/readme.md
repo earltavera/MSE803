@@ -44,6 +44,6 @@ pip install pandas seaborn matplotlib
 Run the analysis:
 
 Bash
-python housing_analysis.py
+python Week1A2.py
 Author
 Earl Tavera Master of Software Engineering Student | Yoobee College
