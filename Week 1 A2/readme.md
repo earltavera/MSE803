@@ -38,6 +38,7 @@ Clone the repository:
 
 Bash
 git clone [https://github.com/yourusername/housing-analysis](https://github.com/earltavera/MSE803/tree/main/Week%201%20A2).git
+
 Install dependencies:
 
 Bash
