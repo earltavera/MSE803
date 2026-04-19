@@ -50,7 +50,7 @@ Computed key metrics to understand the distribution of pollutants and weather va
 ## 🖼️ Output Screenshot
 Below is the output generated from the analysis script:
 
-'/Users/earltavera/Desktop/MSE803/Week 2/Week2A1/code/week2a1-1.png'
+![Analysis Outcome](file:///Users/earltavera/Desktop/MSE803/Week%202/Week2A1/code/week2a1-1.png)
 
 ## ▶️ How to Run
 1. Ensure you have the datasets in the specified directory.
