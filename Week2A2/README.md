@@ -1,7 +1,7 @@
 # Beijing Multi-Site Air Quality Analysis
 MSE803 - Week 2 Activity 2
 
-This project performs a comprehensive exploratory data analysis (EDA) on hourly air quality data from multiple monitoring sites in Beijing.
+This project provides a data processing and analysis pipeline for hourly air quality data across 12 monitoring sites in Beijing. The script automates the merging of large datasets, performs essential data cleaning, and generates statistical insights into air pollution patterns.
 
 📊 About the Data
 The dataset captures environmental conditions from March 2013 to February 2017. Each row represents an hourly measurement including:
@@ -18,10 +18,28 @@ This repository contains a Python-based data pipeline for analyzing hourly air q
 This script is designed to process the **Beijing Multi-Site Air Quality Data Set**. It performs high-level data wrangling to help researchers understand the relationship between environmental factors (like temperature and wind) and harmful pollutants (like PM2.5).
 
 ### How the Script Handles Data:
-1.  **Consolidation:** It uses the `glob` library to find all 12 CSV files in a directory and merges them into a single unified dataset containing hundreds of thousands of records.
-2.  **Cleaning (Handling Missing Data):** Air quality sensors often have "gaps." The script uses **Forward Filling (`ffill`)**, which carries the previous hour's reading into the missing slot. This preserves the time-series flow without deleting valuable context.
-3.  **Feature Engineering:** It converts four separate columns (`year`, `month`, `day`, `hour`) into a single `datetime` object, enabling the script to treat the data as a continuous timeline.
-4.  **Statistical Analysis:** It calculates **Pearson Correlation Coefficients** to mathematically prove which weather conditions (e.g., wind speed) are most effective at reducing pollution.
+## 📖 What This Script Does
+The script handles the transition from raw, fragmented CSV data to a cleaned, visualized dataset. It is divided into six logical tasks:
+1.  **Consolidation:** Merges 12 separate station files into one master DataFrame.
+2.  **Structural Audit:** Checks the dimensions and data types of the combined data.
+3.  **Data Cleaning:** Fixes missing values and prepares time-series data for analysis.
+4.  **Dynamic Station Ranking:** Calculates the worst overall air quality and ranks all stations.
+5.  **Visualization:** Generates line plots to track pollution trends over time.
+6.  **Correlation Analysis:** Investigates how weather (temperature, wind) affects pollution levels (PM2.5).
+
+## 🛠️ Data Handling Process
+Air quality data is often "noisy" or incomplete due to sensor failures. This script handles data using the following logic:
+
+* **Forward Filling (`ffill`):** Instead of deleting rows with missing data (which breaks the timeline), the script carries the last known valid reading forward. This is a standard practice for hourly environmental monitoring.
+* **Datetime Engineering:** It converts four separate integer columns (`year`, `month`, `day`, `hour`) into a single `datetime` object. This allows the computer to understand the linear progression of time for more accurate plotting.
+* **Targeting the Worst Pollution:** Instead of randomly selecting a station, the script uses `.groupby()` to calculate the 4-year PM2.5 average for all locations, automatically targeting the most polluted station for the final visualizations.
+
+## 🚀 How to Run the Script
+
+### 1. Prerequisites
+Ensure you have Python installed along with the necessary data science libraries:
+```bash
+pip install pandas matplotlib seaborn
 
 ## 🚀 How to Run the Project
 
