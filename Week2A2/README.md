@@ -1,5 +1,16 @@
-# Define the README content based on the user's specific script and dataset requirements
-readme_v3 = """# Beijing Multi-Site Air Quality Analysis
+Beijing Multi-Site Air Quality Analysis
+MSE803 - Week 2 Activity 2
+
+This project performs a comprehensive exploratory data analysis (EDA) on hourly air quality data from multiple monitoring sites in Beijing.
+
+📊 About the Data
+The dataset captures environmental conditions from March 2013 to February 2017. Each row represents an hourly measurement including:
+
+Pollution Levels: PM2.5, PM10, SO2, NO2, CO, O3
+Weather Data: Temperature (TEMP), Pressure (PRES), Dew Point (DEWP)
+Rainfall: Precipitation (RAIN)
+Wind Information: Wind Direction (wd) and Wind Speed (WSPM)
+Station: The name of the monitoring site
 
 This repository contains a Python-based data pipeline for analyzing hourly air quality data from 12 monitoring sites in Beijing. The script, `Week2A2.py`, automates the transition from raw data collection to statistical insight and visualization.
 
@@ -25,3 +36,21 @@ Unzip the folder so the CSV files are accessible.
 
 ### 3. Update the Script Path
 Open Week2A2.py and update the path variable to point to the folder where you unzipped the CSVs:
+path = r'/Your/Local/Folder/Path'
+
+### 4. Execute
+Run the script through your terminal or IDE:
+python Week2A2.py
+
+📊 Visualizations & Output
+The script generates two primary visual insights:
+
+Time-Series Trend: A line graph showing how PM2.5 levels fluctuate hourly at a specific station.
+
+Correlation Heatmap: A visual matrix that identifies strong relationships (e.g., how PM2.5 moves in tandem with CO or inverse to Wind Speed).
+
+🔗 Script Location
+The source code for this analysis can be found here:
+[Week2A2.py](https://github.com/earltavera/MSE803/blob/main/Week2A2/Week2A2.py)
+
+
