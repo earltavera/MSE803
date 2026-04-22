@@ -19,9 +19,9 @@ You will need Python 3.x installed along with these libraries:
 ### 2. The Dataset
 Download the official dataset from the UCI Machine Learning Repository:
 
-Dataset Link: Beijing Multi-Site Air Quality Data
+Dataset Link: [Beijing Multi-Site Air Quality Data](https://archive.ics.uci.edu/dataset/501/beijing+multi+site+air+quality+data)
 
 Unzip the folder so the CSV files are accessible.
 
-###3. Update the Script Path
+### 3. Update the Script Path
 Open Week2A2.py and update the path variable to point to the folder where you unzipped the CSVs:
