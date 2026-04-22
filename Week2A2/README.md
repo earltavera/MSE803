@@ -48,8 +48,7 @@ You will need Python 3.x installed along with these libraries:
 ### 2. The Dataset
 Download the official dataset from the UCI Machine Learning Repository:
 
-Dataset Link: [Beijing Multi-Site Air Quality Data](https://archive.ics.uci.edu/dataset/501/beijing+multi+site+air+quality+data)
-
+Dataset Link: [[Beijing Multi-Site Air Quality Data](https://archive.ics.uci.edu/dataset/501/beijing+multi+site+air+quality+data)
 Unzip the folder so the CSV files are accessible.
 
 ### 3. Update the Script Path
@@ -60,12 +59,6 @@ path = r'/Your/Local/Folder/Path'
 Run the script through your terminal or IDE:
 python Week2A2.py
 
-📊 Visualizations & Output
-The script generates two primary visual insights:
-
-Time-Series Trend: A line graph showing how PM2.5 levels fluctuate hourly at a specific station.
-
-Correlation Heatmap: A visual matrix that identifies strong relationships (e.g., how PM2.5 moves in tandem with CO or inverse to Wind Speed).
 
 🔗 Script Location
 The source code for this analysis can be found here:
