@@ -1,4 +1,4 @@
-Beijing Multi-Site Air Quality Analysis
+# Beijing Multi-Site Air Quality Analysis
 MSE803 - Week 2 Activity 2
 
 This project performs a comprehensive exploratory data analysis (EDA) on hourly air quality data from multiple monitoring sites in Beijing.
