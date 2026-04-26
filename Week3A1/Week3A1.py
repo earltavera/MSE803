@@ -3,7 +3,6 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 
-
 # Load the dataset
 file_path = '/Users/earltavera/Desktop/MSE803/Week 3/age_networth.csv'
 df = pd.read_csv(file_path)
