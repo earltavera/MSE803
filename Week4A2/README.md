@@ -18,9 +18,29 @@ Window Function for Ranking - RANK(...) OVER(...): Sorts the countries by Happin
 
 Sorting Output: The ORDER BY statement ensures the final view organizes countries by High, then Medium, then Low, and sorts them by rank within those buckets.
 
-Part 2: Corruption Perception Impact Analysis
-Objective: Use a subquery to evaluate if a country is perceived to have high or low corruption relative to the global average, and then compare how these groups perform on multiple metrics.
+## Part 2: Corruption Perception Impact Analysis
 
+Objective: Use a subquery to evaluate if a country is perceived to have high or low corruption relative to the global average, and then compare how these groups perform on multiple metrics.
+[gemini-code-1778142128173.sql](https://github.com/user-attachments/files/27471455/gemini-code-1778142128173.sql)
+SELECT 
+    Corruption_Level,
+    COUNT(*) as Country_Count,
+    ROUND(AVG(Happiness_Score), 2) AS Avg_Happiness,
+    ROUND(AVG(GDP_per_Capita), 2) AS Avg_GDP,
+    ROUND(AVG(Healthy_Life_Expectancy), 2) AS Avg_Life_Expectancy
+FROM (
+    SELECT 
+        Happiness_Score, 
+        GDP_per_Capita, 
+        Healthy_Life_Expectancy,
+        CASE 
+            WHEN Perceptions_of_Corruption >= (SELECT AVG(Perceptions_of_Corruption) FROM happiness) 
+            THEN 'Above Avg Corruption Perception'
+            ELSE 'Below Avg Corruption Perception'
+        END AS Corruption_Level
+    FROM happiness
+) AS SubQuery
+GROUP BY Corruption_Level;
 <img width="1425" height="237" alt="Query_2" src="https://github.com/user-attachments/assets/47545c5e-f047-442c-b8d7-79e1b5596c3b" />
 
 Logic and Explanation
