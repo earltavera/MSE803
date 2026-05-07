@@ -10,6 +10,7 @@ This repository contains SQL queries used to aggregate and analyze the World Hap
 
 
 Logic and Explanation
+
 Common Table Expression (CTE) - WITH CategorizedData AS (...): Acts as a temporary table. Cut-off points for 'High', 'Medium', and 'Low' categories are determined using the 75th percentile (1.39) and the 25th percentile (0.90) of the GDP_per_Capita values via a CASE statement.
 
 Window Function for Average - AVG(...) OVER(...): The OVER (PARTITION BY GDP_Category) clause calculates the average happiness strictly for each category while keeping individual country rows intact.
@@ -21,29 +22,31 @@ Sorting Output: The ORDER BY statement ensures the final view organizes countrie
 ## Part 2: Corruption Perception Impact Analysis
 
 Objective: Use a subquery to evaluate if a country is perceived to have high or low corruption relative to the global average, and then compare how these groups perform on multiple metrics.
-(https://github.com/user-attachments/files/27471455/gemini-code-1778142128173.sql)
-SELECT 
-    Corruption_Level,
-    COUNT(*) as Country_Count,
-    ROUND(AVG(Happiness_Score), 2) AS Avg_Happiness,
-    ROUND(AVG(GDP_per_Capita), 2) AS Avg_GDP,
-    ROUND(AVG(Healthy_Life_Expectancy), 2) AS Avg_Life_Expectancy
-FROM (
-    SELECT 
-        Happiness_Score, 
-        GDP_per_Capita, 
-        Healthy_Life_Expectancy,
-        CASE 
-            WHEN Perceptions_of_Corruption >= (SELECT AVG(Perceptions_of_Corruption) FROM happiness) 
-            THEN 'Above Avg Corruption Perception'
-            ELSE 'Below Avg Corruption Perception'
-        END AS Corruption_Level
-    FROM happiness
-) AS SubQuery
-GROUP BY Corruption_Level;
+[SQL_Analysis.py](https://github.com/user-attachments/files/27471520/SQL_Analysis.py)
+import pandas as pd
+import sqlite3
+import matplotlib.pyplot as plt
+
+# Load data
+df = pd.read_csv('/Users/earltavera/Desktop/MSE803/Week 4/Week4A1/Week4A2/world_happiness_dataset.csv')
+
+# Create SQLite DB
+conn = sqlite3.connect(':memory:')
+df.to_sql('happiness', conn, index=False)
+
+# Analyze GDP to set thresholds
+gdp_min = df['GDP_per_Capita'].min()
+gdp_max = df['GDP_per_Capita'].max()
+gdp_mean = df['GDP_per_Capita'].mean()
+gdp_q3 = df['GDP_per_Capita'].quantile(0.75)
+gdp_q1 = df['GDP_per_Capita'].quantile(0.25)
+
+print(f"GDP Min: {gdp_min}, Max: {gdp_max}, Mean: {gdp_mean}, Q1: {gdp_q1}, Q3: {gdp_q3}")
 <img width="1425" height="237" alt="Query_2" src="https://github.com/user-attachments/assets/47545c5e-f047-442c-b8d7-79e1b5596c3b" />
 
+
 Logic and Explanation
+
 The Dynamic Subquery: (SELECT AVG(Perceptions_of_Corruption) FROM happiness) dynamically fetches the exact mean of corruption perception across the entire dataset.
 
 The Inner Query: Takes every row, compares its corruption perception against the global average, and labels it as 'Above Avg Corruption Perception' or 'Below Avg Corruption Perception' using a CASE statement.
