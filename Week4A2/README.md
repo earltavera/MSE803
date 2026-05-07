@@ -6,7 +6,7 @@ This repository contains SQL queries used to aggregate and analyze the World Hap
 
 **Objective:** Group countries into High, Medium, and Low GDP per capita brackets, calculate the average happiness score for each bracket, and assign a happiness rank to every country within its specific category.
 
-https://github.com/earltavera/MSE803/blob/main/Week4A2/query1.sql    
+ 
 <img width="1425" height="1069" alt="Query_1" src="https://github.com/user-attachments/assets/cc441483-074a-4a5e-bfd9-70ce2b289505" />
 
 
