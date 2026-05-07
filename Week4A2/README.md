@@ -21,4 +21,4 @@ Sorting Output: The ORDER BY statement ensures the final view organizes countrie
 Part 2: Corruption Perception Impact Analysis
 Objective: Use a subquery to evaluate if a country is perceived to have high or low corruption relative to the global average, and then compare how these groups perform on multiple metrics.
 
-https://github.com/earltavera/MSE803/blob/main/Week4A2/Query_2.png
+Week4A2/Query_2.png
