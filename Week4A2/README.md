@@ -21,7 +21,7 @@ Sorting Output: The ORDER BY statement ensures the final view organizes countrie
 ## Part 2: Corruption Perception Impact Analysis
 
 Objective: Use a subquery to evaluate if a country is perceived to have high or low corruption relative to the global average, and then compare how these groups perform on multiple metrics.
-[gemini-code-1778142128173.sql](https://github.com/user-attachments/files/27471455/gemini-code-1778142128173.sql)
+(https://github.com/user-attachments/files/27471455/gemini-code-1778142128173.sql)
 SELECT 
     Corruption_Level,
     COUNT(*) as Country_Count,
