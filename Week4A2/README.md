@@ -1,4 +1,4 @@
-# World Happiness SQL Analysis
+[query1.sql](https://github.com/user-attachments/files/27471792/query1.sql)# World Happiness SQL Analysis
 
 This repository contains SQL queries used to aggregate and analyze the World Happiness Dataset. The analysis is divided into two main parts: GDP categorization and Corruption Perception impact.
 
@@ -6,7 +6,7 @@ This repository contains SQL queries used to aggregate and analyze the World Hap
 
 **Objective:** Group countries into High, Medium, and Low GDP per capita brackets, calculate the average happiness score for each bracket, and assign a happiness rank to every country within its specific category.
 
-WITH CategorizedData AS (
+[Uploading query1.sql…]WITH CategorizedData AS (
     SELECT 
         Country, 
         Happiness_Score,
@@ -31,7 +31,8 @@ ORDER BY
         WHEN 'Medium' THEN 2 
         WHEN 'Low' THEN 3 
     END, 
-    Rank_in_Category;
+    Rank_in_Category;()
+
     
 <img width="1425" height="1069" alt="Query_1" src="https://github.com/user-attachments/assets/cc441483-074a-4a5e-bfd9-70ce2b289505" />
 
@@ -50,7 +51,26 @@ Sorting Output: The ORDER BY statement ensures the final view organizes countrie
 
 Objective: Use a subquery to evaluate if a country is perceived to have high or low corruption relative to the global average, and then compare how these groups perform on multiple metrics.
 
-
+[query2.sql](https://github.com/user-attachments/files/27471803/query2.sql)
+SELECT 
+    Corruption_Level,
+    COUNT(*) as Country_Count,
+    ROUND(AVG(Happiness_Score), 2) AS Avg_Happiness,
+    ROUND(AVG(GDP_per_Capita), 2) AS Avg_GDP,
+    ROUND(AVG(Healthy_Life_Expectancy), 2) AS Avg_Life_Expectancy
+FROM (
+    SELECT 
+        Happiness_Score, 
+        GDP_per_Capita, 
+        Healthy_Life_Expectancy,
+        CASE 
+            WHEN Perceptions_of_Corruption >= (SELECT AVG(Perceptions_of_Corruption) FROM happiness) 
+            THEN 'Above Avg Corruption Perception'
+            ELSE 'Below Avg Corruption Perception'
+        END AS Corruption_Level
+    FROM happiness
+) AS SubQuery
+GROUP BY Corruption_Level;
 <img width="1425" height="237" alt="Query_2" src="https://github.com/user-attachments/assets/47545c5e-f047-442c-b8d7-79e1b5596c3b" />
 
 
