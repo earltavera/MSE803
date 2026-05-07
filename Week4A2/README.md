@@ -38,7 +38,7 @@ ORDER BY
 
 
 
-**Logic and Explanation**
+## Logic and Explanation
 Common Table Expression (CTE) - WITH CategorizedData AS (...): Acts as a temporary table. Cut-off points for 'High', 'Medium', and 'Low' categories are determined using the 75th percentile (1.39) and the 25th percentile (0.90) of the GDP_per_Capita values via a CASE statement.
 
 Window Function for Average - AVG(...) OVER(...): The OVER (PARTITION BY GDP_Category) clause calculates the average happiness strictly for each category while keeping individual country rows intact.
