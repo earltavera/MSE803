@@ -34,3 +34,18 @@ ORDER BY
         WHEN 'Low' THEN 3 
     END, 
     Rank_in_Category;
+
+
+
+
+**Logic and Explanation**
+Common Table Expression (CTE) - WITH CategorizedData AS (...): Acts as a temporary table. Cut-off points for 'High', 'Medium', and 'Low' categories are determined using the 75th percentile (1.39) and the 25th percentile (0.90) of the GDP_per_Capita values via a CASE statement.
+
+Window Function for Average - AVG(...) OVER(...): The OVER (PARTITION BY GDP_Category) clause calculates the average happiness strictly for each category while keeping individual country rows intact.
+
+Window Function for Ranking - RANK(...) OVER(...): Sorts the countries by Happiness_Score in descending order, but restarts the ranking sequence at 1 for every new GDP category.
+
+Sorting Output: The ORDER BY statement ensures the final view organizes countries by High, then Medium, then Low, and sorts them by rank within those buckets.
+
+Part 2: Corruption Perception Impact Analysis
+Objective: Use a subquery to evaluate if a country is perceived to have high or low corruption relative to the global average, and then compare how these groups perform on multiple metrics.
