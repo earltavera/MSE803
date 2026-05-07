@@ -21,4 +21,14 @@ Sorting Output: The ORDER BY statement ensures the final view organizes countrie
 Part 2: Corruption Perception Impact Analysis
 Objective: Use a subquery to evaluate if a country is perceived to have high or low corruption relative to the global average, and then compare how these groups perform on multiple metrics.
 
-Week4A2/Query_2.png
+<img width="1425" height="237" alt="Query_2" src="https://github.com/user-attachments/assets/47545c5e-f047-442c-b8d7-79e1b5596c3b" />
+
+Logic and Explanation
+The Dynamic Subquery: (SELECT AVG(Perceptions_of_Corruption) FROM happiness) dynamically fetches the exact mean of corruption perception across the entire dataset.
+
+The Inner Query: Takes every row, compares its corruption perception against the global average, and labels it as 'Above Avg Corruption Perception' or 'Below Avg Corruption Perception' using a CASE statement.
+
+Outer Aggregation: Gathers the newly labeled rows and applies a GROUP BY Corruption_Level.
+
+Calculations: Uses COUNT() to see how many countries fall into each bucket, alongside AVG() measurements (rounded to 2 decimal places) to compare Happiness, GDP, and Life Expectancy.
+
