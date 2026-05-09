@@ -30,12 +30,12 @@ The study utilized visual tools to interpret the complex relationships between s
 ### Correlation Analysis (Pearson Heatmap)
 
 
-
 A Pearson correlation heatmap was generated to measure the linear relationships between features:
+
+<img src="https://github.com/earltavera/MSE803/blob/main/Week4A1/cleaned_heatmap.png" width="600">
 - **Corruption and Social Support:** Observed a moderate positive correlation (**0.41**).
 - **Generosity and Freedom:** Revealed a strong negative correlation (**-0.56**), indicating these factors often move in opposite directions in this sample.
 - **Corruption and Happiness:** A negative correlation (**-0.34**) suggests that higher perceived corruption typically aligns with lower happiness scores.
-<img src="https://github.com/earltavera/MSE803/blob/main/Week4A1/gdp_happiness_viz.png" width="600">
 - **GDP and Happiness:** Surprisingly, GDP per Capita showed almost no linear correlation (**0.01**) with the overall Happiness Score for this specific subset.
 
 ### Distribution and Outlier Identification (Boxplots)
@@ -44,8 +44,6 @@ Boxplots were used to confirm data spread and validate the outlier audit:
 
 <img src="https://github.com/earltavera/MSE803/blob/main/Week4A1/boxplot_viz.png?raw=true" width="600">
 - **Healthy Life Expectancy:** This feature exhibited the widest range, with values spanning from approximately **41 to 81 years**.
-
-
 - **Consistency:** The visual "whiskers" of the boxplots confirmed that all data points reside within acceptable statistical ranges.
 
 ## Summary of Findings
