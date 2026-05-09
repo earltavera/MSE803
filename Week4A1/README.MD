@@ -41,7 +41,7 @@ A Pearson correlation heatmap was generated to measure the linear relationships 
 
 Boxplots were used to confirm data spread and validate the outlier audit:
 
-https://github.com/earltavera/MSE803/blob/main/Week4A1/boxplot_viz.png?raw=true
+<img src="https://github.com/earltavera/MSE803/blob/main/Week4A1/boxplot_viz.png?raw=true" width="300">
 - **Healthy Life Expectancy:** This feature exhibited the widest range, with values spanning from approximately **41 to 81 years**.
 - **Consistency:** The visual "whiskers" of the boxplots confirmed that all data points reside within acceptable statistical ranges.
 
