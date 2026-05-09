@@ -28,6 +28,9 @@ To ensure the quality of the analysis, a comprehensive audit and cleaning proces
 The study utilized visual tools to interpret the complex relationships between socioeconomic factors and happiness scores.
 
 ### Correlation Analysis (Pearson Heatmap)
+
+https://github.com/earltavera/MSE803/blob/main/Week4A1/correlation_viz.png
+
 A Pearson correlation heatmap was generated to measure the linear relationships between features:
 - **Corruption and Social Support:** Observed a moderate positive correlation (**0.41**).
 - **Generosity and Freedom:** Revealed a strong negative correlation (**-0.56**), indicating these factors often move in opposite directions in this sample.
