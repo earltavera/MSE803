@@ -32,7 +32,7 @@ The study utilized visual tools to interpret the complex relationships between s
 
 A Pearson correlation heatmap was generated to measure the linear relationships between features:
 
-<img src="https://github.com/earltavera/MSE803/blob/main/Week4A1/cleaned_heatmap.png" width="600">
+<img src="https://github.com/earltavera/MSE803/blob/main/Week4A1/cleaned_heatmap.png" width="800">
 
 - **Corruption and Social Support:** Observed a moderate positive correlation (**0.41**).
 - **Generosity and Freedom:** Revealed a strong negative correlation (**-0.56**), indicating these factors often move in opposite directions in this sample.
@@ -43,7 +43,7 @@ A Pearson correlation heatmap was generated to measure the linear relationships 
 
 Boxplots were used to confirm data spread and validate the outlier audit:
 
-<img src="https://github.com/earltavera/MSE803/blob/main/Week4A1/boxplot_viz.png?raw=true" width="600">
+<img src="https://github.com/earltavera/MSE803/blob/main/Week4A1/boxplot_viz.png?raw=true" width="800">
 - **Healthy Life Expectancy:** This feature exhibited the widest range, with values spanning from approximately 41 to 81 years.
 - **Consistency:** The visual "whiskers" of the boxplots confirmed that all data points reside within acceptable statistical ranges.
 
