@@ -13,6 +13,14 @@ The data model is built upon the `Retail_Sales_sample-Dataset.csv` file.
 * **Product Info**: Category (Electronics, Furniture, Clothing), Product Name
 * **Financials**: Sales Amount, Discount (%), Profit
 * **Customer Demographics**: Region, Customer Segment (Consumer, Corporate, Home Office)
+  
+* The dashboard is designed to guide the viewer from high-level summaries down to specific segment breakdowns.
+
+KPI (Key Performance Indicator) Cards: These are the large numbers at the top of the report. They provide an immediate "pulse check" on the business. We track Total Sales, Total Profit, Total Quantity Sold, and Average Profit Margin. This prevents the viewer from having to do mental math.
+
+Bar Chart (Total Sales by Category): This vertical bar chart compares the three main product lines side-by-side. Bar charts are the best visual tool for comparing distinct categories because the human eye can easily judge the differences in bar height to determine which category is performing best.
+
+Pie Chart (Sales by Customer Segment): This visual shows how your total revenue is divided among different types of buyers. A pie chart is used here because it perfectly illustrates "parts of a whole" (how the 100% of your sales are split).
 
 ## Key Features
 * **Executive KPI Summary**: High-level tracking of total revenue and profit margins.
