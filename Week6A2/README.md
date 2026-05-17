@@ -29,7 +29,7 @@ Running the script automatically generates and saves the following charts to you
 
 
 <img width="1171" height="552" alt="output" src="https://github.com/user-attachments/assets/c511342a-9c9f-43e7-8802-5256e1d440af" />
-visualization of a machine learning classification model's decision boundaries.
+*Visualization of a machine learning classification model's decision boundaries.
 
 Based on the axis labels ("Sepal Length" and "Sepal Width"), this is almost certainly plotting data from the famous Iris dataset, which is often used to teach machine learning concepts.
 
