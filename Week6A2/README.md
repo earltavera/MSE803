@@ -57,3 +57,10 @@ The confusion matrix gives a detailed breakdown of where the model made correct 
    ^  ^  ^
    |  |  |
 Predicted Class
+
+
+
+
+
+Dataset source: https://archive.ics.uci.edu/dataset/109/wine
+References: Aeberhard, S. & Forina, M. (1992). Wine [Dataset]. UCI Machine Learning Repository. https://doi.org/10.24432/C5PC7J.
