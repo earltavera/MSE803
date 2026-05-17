@@ -43,6 +43,7 @@ The data is split into **70% training** and **30% testing** sets. Stratified sam
 A **Support Vector Machine (SVM)** classifier initialized with a **linear kernel** (`kernel='linear'`) is fitted to the training set. A linear boundaries approach is ideal here given the highly clear separation demonstrated by the petal metrics.
 
 ---
+<img width="359" height="448" alt="Screenshot 2026-05-17 at 12 31 57 PM" src="https://github.com/user-attachments/assets/f049928b-d343-4833-8b2c-6cf9496c7996" />
 
 ## Evaluation Outputs
 Upon running the pipeline, the system outputs comprehensive classification reports detailing performance:
