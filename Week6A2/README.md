@@ -2,6 +2,10 @@
 
 This project performs Exploratory Data Analysis (EDA), data cleaning, visualization, and predictive modeling on the classic **Wine Dataset** from the UCI Machine Learning Repository. A linear Support Vector Classifier (SVC) is used to distinguish between three different wine cultivars based on their 13 chemical properties.
 
+# Dataset source: https://archive.ics.uci.edu/dataset/109/wine
+# References: Aeberhard, S. & Forina, M. (1992). Wine [Dataset]. UCI Machine Learning Repository. https://doi.org/10.24432/C5PC7J.
+
+
 ---
 
 ## Project Features
@@ -62,5 +66,3 @@ Predicted Class
 
 
 
-Dataset source: https://archive.ics.uci.edu/dataset/109/wine
-References: Aeberhard, S. & Forina, M. (1992). Wine [Dataset]. UCI Machine Learning Repository. https://doi.org/10.24432/C5PC7J.
