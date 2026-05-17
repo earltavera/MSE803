@@ -29,25 +29,69 @@ Running the script automatically generates and saves the following charts to you
 
 
 <img width="1171" height="552" alt="output" src="https://github.com/user-attachments/assets/c511342a-9c9f-43e7-8802-5256e1d440af" />
-*Visualization of a machine learning classification model's decision boundaries.
+Data Cleaning Summary
+--- Before Cleaning ---
 
-Based on the axis labels ("Sepal Length" and "Sepal Width"), this is almost certainly plotting data from the famous Iris dataset, which is often used to teach machine learning concepts.
+Dataset Size: (178, 14): This indicates the raw dataset has 178 rows (individual wine samples) and 14 columns. Typically, one column is the target variable (the class or type of wine), and the remaining 13 are features (chemical properties like alcohol content, flavanoids, color intensity, etc.).
 
-Here is a breakdown of what the different parts of the image represent:
+Duplicates: 0: There are no identical rows in the dataset.
 
-The Axes (Features): The horizontal axis represents "Sepal Length" and the vertical axis represents "Sepal Width". These are the two features (out of four in the original dataset) the model is using to make its predictions. By only using two features, we can visualize the results on a 2D graph.
+Missing Values: 0 total missing cells: The dataset is complete; there are no empty cells or NaN (Not a Number) values. This is an ideal scenario in data science.
 
-The Markers (Data Points): The individual shapes (red dots, blue squares, and green triangles) represent the actual data points from the dataset.
+--- After Cleaning ---
 
-There are three distinct classes (labeled 0, 1, and 2), which typically correspond to the three Iris flower species: Setosa, Versicolor, and Virginica.
+Dataset Size: (178, 14): Because there were no duplicates or missing values, the data cleaning steps (like dropping duplicates or filling missing values) didn't alter the dataset. The size remains exactly the same.
 
-The Background Colors (Prediction Regions): The shaded background areas (light red, light blue, light green) show how the trained machine learning model interprets the space.
+Charts saved...: This line confirms that the code generated and saved two visualizations locally: one showing the distribution of wine classes and another plotting alcohol content against color intensity.
 
-If you were to introduce a completely new flower with a specific sepal length and width, the color of the region it falls into dictates what class the model will predict for it.
+Model Evaluation Summary
+The second half of the output details the performance of the classification model (likely a Support Vector Machine or similar classifier, given previous contexts) on the test portion of the data.
 
-The Lines (Decision Boundaries): The places where the background colors meet are the decision boundaries. These are the specific thresholds where the model switches its prediction from one class to another.
+Accuracy: 0.9630: This is the headline metric. It means the model correctly predicted the class of the wine 96.3% of the time on the unseen test dataset.
 
-Model Type Analysis: Because the decision boundaries are curved and somewhat complex (rather than straight lines), we can tell that the underlying model is a non-linear classifier. This means it is capable of finding more intricate patterns than a simple linear model. Common models that produce boundaries like this include Support Vector Machines (SVM) with an RBF kernel or k-Nearest Neighbors (k-NN).
+The Confusion Matrix
+The confusion matrix gives a detailed breakdown of where the model made correct predictions and where it made errors across the three different classes (labeled 1, 2, and 3).
+
+Plaintext
+[[18  0  0]  <- Actual Class 1
+ [ 1 20  0]  <- Actual Class 2
+ [ 0  1 14]] <- Actual Class 3
+   ^  ^  ^
+   |  |  |
+Predicted Class
+
+Row 1 (Actual Class 1): Out of 18 total Class 1 wines, the model predicted all 18 correctly.
+
+Row 2 (Actual Class 2): Out of 21 total Class 2 wines, the model predicted 20 correctly, but mistakenly classified 1 as Class 1.
+
+Row 3 (Actual Class 3): Out of 15 total Class 3 wines, the model predicted 14 correctly, but mistakenly classified 1 as Class 2.
+
+The diagonal elements (18, 20, 14) represent the correct predictions, while the off-diagonal elements (1, 1) represent the errors.
+
+The Classification Report
+This report provides deeper metrics for each specific class, which is especially useful if the classes are imbalanced (though they are fairly balanced here).
+
+precision: Out of all the wines the model predicted to be in a certain class, how many actually were?
+
+Example (Class 3): Precision is 1.00 (100%). The model predicted Class 3 14 times (look down the third column of the confusion matrix), and all 14 times it was correct.
+
+recall: Out of all the actual wines in a certain class, how many did the model successfully find?
+
+Example (Class 1): Recall is 1.00 (100%). There were 18 Class 1 wines in the test set, and the model found all of them.
+
+Example (Class 3): Recall is 0.93 (93%). There were 15 actual Class 3 wines, but the model only found 14 of them (missing 1).
+
+f1-score: This is the harmonic mean of precision and recall. It provides a single metric that balances both concerns. Scores of 0.95 to 0.97 are excellent.
+
+support: This is simply the number of actual occurrences of each class in the test dataset (18, 21, and 15, totaling 54 samples).
+
+accuracy: The overall accuracy across all classes (0.96 or 96.3%), matching the top line.
+
+macro avg: The unweighted average of precision, recall, and F1-score across all three classes. It treats all classes equally, regardless of how many samples they have.
+
+weighted avg: The average of those metrics, weighted by the number of samples (support) in each class. This is often the most representative overall metric when classes are unevenly distributed.
+
+In summary, this output indicates you are working with a perfectly clean dataset and your model is highly effective at distinguishing between the three wine cultivars.
 
 ## Model Performance
 
