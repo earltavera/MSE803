@@ -16,7 +16,13 @@ This project performs Exploratory Data Analysis (EDA), data cleaning, visualizat
 
 ## Generated Visualizations
 Running the script automatically generates and saves the following charts to your working directory:
+
+<img width="600" height="400" alt="wine_class_distribution" src="https://github.com/user-attachments/assets/a68b8c05-c5a2-4058-ac20-adebcb744740" />
+
 * `wine_class_distribution.png`: A bar chart showing the count balance of instances across the three wine classes.
+
+  <img width="800" height="600" alt="wine_alcohol_vs_color" src="https://github.com/user-attachments/assets/8d763891-5d1e-48e4-a29e-dd4cd0bf91b3" />
+
 * `wine_alcohol_vs_color.png`: A scatter plot demonstrating how the different wine classes separate based on Alcohol content and Color Intensity.
 
 ---
