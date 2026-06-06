@@ -20,7 +20,8 @@ Superclass 1 (Living Things / Animals): bird, cat, deer, dog, frog, horse2.
 2. Multi-Task Joint Loss
    Optimization is performed concurrently across both taxonomies by minimizing a weighted joint Multi-Task Cross-Entropy loss:
    
-   $$\text{Loss}_{\text{total}} = \alpha \cdot \text{Loss}_{\text{superclass}} + \beta \cdot \text{Loss}_{\text{subclass}}$$For this implementation, $\alpha = 0.5$ and $\beta = 0.5$ were utilized.
+<img width="678" height="140" alt="Screenshot 2026-06-06 at 9 00 38 PM" src="https://github.com/user-attachments/assets/f9e908bd-7571-412f-ad8a-b34a3f2b5031" />
+
 
    💻 Getting StartedPrerequisitesEnsure you have Python 3.8+ and standard PyTorch dependencies installed.
 
@@ -84,6 +85,4 @@ By training the network with multi-level supervision, the features extracted by 
        (Output: 2 Logits)           (Output: 10 Logits)
      Animals vs. Transport          Fine-Grained Classes
 
-1. Hierarchical Class MappingThe standard 10 classes of CIFAR-10 were partitioned into 2 meaningful Superclasses:Superclass 0 (Objects / Transport): airplane, automobile, ship, truckSuperclass 1 (Living Things / Animals): bird, cat, deer, dog, frog, horse2. Multi-Task Joint LossOptimization is performed concurrently across both taxonomies by minimizing a weighted joint Multi-Task Cross-Entropy loss:$$\text{Loss}_{\text{total}} = \alpha \cdot \text{Loss}_{\text{superclass}} + \beta \cdot \text{Loss}_{\text{subclass}}$$For this implementation, $\alpha = 0.5$ and $\beta = 0.5$ were utilized.💻 Getting StartedPrerequisitesEnsure you have Python 3.8+ and standard PyTorch dependencies installed.Bashpip install torch torchvision matplotlib
-Training the Multi-Level NetworkTo run the training loop, configure your weights, and execute evaluations:Bashpython train.py --epochs 15 --batch_size 64
-📊 Detailed MetricsTaxonomy LevelClass Matrix SizeFinal Test AccuracyLevel 1 (Superclass)2 classes88.65%Level 2 (Subclass)10 classes74.20%🔗 Project ContextThis framework was adapted and extended from the baseline CIFAR-10 pipelines to support advanced hierarchical visual taxonomies.Main Repository URL: github.com/dev-architect/cifar10-multilevel-classification
+<img width="753" height="163" alt="Screenshot 2026-06-06 at 9 00 03 PM" src="https://github.com/user-attachments/assets/a1402d85-03cc-4dc5-b427-8635da043c13" />
