@@ -48,4 +48,18 @@ Main Repository URL: github.com/dev-architect/cifar10-multilevel-classification
 
 **Output trained model is:** CIFAR_10_tens.h5
 
+*Step-by-step breakdown and description of the image classification pipeline built with TensorFlow/Keras to classify the CIFAR-10 dataset.*
+<img width="811" height="294" alt="Screenshot 2026-06-06 at 11 28 18 PM" src="https://github.com/user-attachments/assets/c7f4049f-9b80-4a74-9e6c-0feb94a02e91" />
+<img width="827" height="465" alt="Screenshot 2026-06-06 at 11 29 11 PM" src="https://github.com/user-attachments/assets/d0cbf321-b175-499b-9976-556e2cb4dd19" />
+<img width="665" height="540" alt="Screenshot 2026-06-06 at 11 29 48 PM" src="https://github.com/user-attachments/assets/85cc89f5-17f5-40d8-ae66-69ce0a1f41ad" />
+<img width="807" height="250" alt="Screenshot 2026-06-06 at 11 30 15 PM" src="https://github.com/user-attachments/assets/4c575f80-64ef-42d3-a52e-71c3d1e4609c" />
+<img width="826" height="410" alt="Screenshot 2026-06-06 at 11 30 38 PM" src="https://github.com/user-attachments/assets/951d1736-e282-44fd-aa86-97c6966d3865" />
+<img width="848" height="541" alt="Screenshot 2026-06-06 at 11 30 56 PM" src="https://github.com/user-attachments/assets/fb4fd13b-2b13-4446-b9df-83535f9b32fe" />
+<img width="768" height="110" alt="Screenshot 2026-06-06 at 11 31 41 PM" src="https://github.com/user-attachments/assets/da14b889-ea2a-4752-8c99-ef165bb36b40" />
+
+
+
+
+
+
 
