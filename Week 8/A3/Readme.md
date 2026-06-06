@@ -47,7 +47,7 @@ This framework was adapted and extended from the baseline CIFAR-10 pipelines to 
 Main Repository URL: github.com/dev-architect/cifar10-multilevel-classification
 
 **Output trained model is:** CIFAR_10_tens.h5
-
+======================
 ****Step-by-step breakdown and description of the image classification pipeline built with TensorFlow/Keras to classify the CIFAR-10 dataset.****
 <img width="811" height="294" alt="Screenshot 2026-06-06 at 11 28 18 PM" src="https://github.com/user-attachments/assets/c7f4049f-9b80-4a74-9e6c-0feb94a02e91" />
 <img width="827" height="465" alt="Screenshot 2026-06-06 at 11 29 11 PM" src="https://github.com/user-attachments/assets/d0cbf321-b175-499b-9976-556e2cb4dd19" />
