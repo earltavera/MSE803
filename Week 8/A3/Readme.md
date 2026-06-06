@@ -19,7 +19,9 @@ Superclass 1 (Living Things / Animals): bird, cat, deer, dog, frog, horse2.
 
 2. Multi-Task Joint Loss
    Optimization is performed concurrently across both taxonomies by minimizing a weighted joint Multi-Task Cross-Entropy loss:
+   
    $$\text{Loss}_{\text{total}} = \alpha \cdot \text{Loss}_{\text{superclass}} + \beta \cdot \text{Loss}_{\text{subclass}}
+
    $$For this implementation, $\alpha = 0.5$ and $\beta = 0.5$ were utilized.
 
    💻 Getting StartedPrerequisitesEnsure you have Python 3.8+ and standard PyTorch dependencies installed.
@@ -39,7 +41,8 @@ Level 1 (Superclass)  2 classes            88.65%
 Level 2 (Subclass)    10 classes            74.20%
 
 🔗 Project Context
-This framework was adapted and extended from the baseline CIFAR-10 pipelines to support advanced hierarchical visual taxonomies.Main Repository URL: github.com/dev-architect/cifar10-multilevel-classification
+This framework was adapted and extended from the baseline CIFAR-10 pipelines to support advanced hierarchical visual taxonomies.
+Main Repository URL: github.com/dev-architect/cifar10-multilevel-classification
 
 """with open("README.md", "w") as f:f.write(readme_content)Your Markdown file is ready
 [file-tag: code-generated-file-0-1780734607888843725]
@@ -71,7 +74,9 @@ By training the network with multi-level supervision, the features extracted by 
 ├── dataset.py                 # Hierarchical target mapping and data loader
 ├── model.py                   # Multi-Branch CNN Architecture
 └── train.py                   # Joint loss training loop and evaluation
-🏗️ System Architecture & Development ProcessInstead of standard single-label cross-entropy, this architecture forks the hidden representations after a shared feature-extraction backbone to drive two parallel classifier heads.                   [ Input Image (3x32x32) ]
+🏗️ System Architecture & Development ProcessInstead of standard single-label cross-entropy, this architecture forks the hidden representations after a shared feature-extraction backbone to drive two parallel classifier heads.
+
+                [ Input Image (3x32x32) ]
                               │
                     [ Shared CNN Backbone ]
                               │
