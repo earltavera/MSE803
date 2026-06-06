@@ -29,6 +29,7 @@ Superclass 1 (Living Things / Animals): bird, cat, deer, dog, frog, horse2.
    pip install torch torchvision matplotlib
    
 Training the Multi-Level Network
+
 To run the training loop, configure your weights, and execute evaluations:
 
 Bash
