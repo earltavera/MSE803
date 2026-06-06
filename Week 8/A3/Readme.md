@@ -20,9 +20,7 @@ Superclass 1 (Living Things / Animals): bird, cat, deer, dog, frog, horse2.
 2. Multi-Task Joint Loss
    Optimization is performed concurrently across both taxonomies by minimizing a weighted joint Multi-Task Cross-Entropy loss:
    
-   $$\text{Loss}_{\text{total}} = \alpha \cdot \text{Loss}_{\text{superclass}} + \beta \cdot \text{Loss}_{\text{subclass}}
-
-   $$For this implementation, $\alpha = 0.5$ and $\beta = 0.5$ were utilized.
+   $$\text{Loss}_{\text{total}} = \alpha \cdot \text{Loss}_{\text{superclass}} + \beta \cdot \text{Loss}_{\text{subclass}}$$For this implementation, $\alpha = 0.5$ and $\beta = 0.5$ were utilized.
 
    💻 Getting StartedPrerequisitesEnsure you have Python 3.8+ and standard PyTorch dependencies installed.
 
