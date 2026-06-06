@@ -46,6 +46,6 @@ To run the training loop, configure your weights, and execute evaluations:
 This framework was adapted and extended from the baseline CIFAR-10 pipelines to support advanced hierarchical visual taxonomies.
 Main Repository URL: github.com/dev-architect/cifar10-multilevel-classification
 
-**Output trained model is: CIFAR_10_tens.h5
+**Output trained model is:** CIFAR_10_tens.h5
 
 
