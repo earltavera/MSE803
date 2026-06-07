@@ -42,17 +42,28 @@ Following execution of the `KMeans(n_clusters=3, random_state=42)` model, the 20
 
 ## 📈 Summary of Presentation Slides
 
-This repository includes a 3-slide visual presentation pitch mapping the operational findings to core executive decisions:
+This repository includes a 5-slide minimalist visual presentation pitch mapping the operational findings to core executive decisions, presented by **Earl Tavera**:
 
-* **Slide 1: Data Preprocessing & Pipeline Architecture**
+* **Slide 1: Title & Overview**
+  * **Title:** K-Means Clustering on Fitness App User Data
+  * **Presenter:** Earl Tavera
+  * Sets the executive tone for the data-driven presentation with a clean, distraction-free minimalist layout.
+
+* **Slide 2: Data Preprocessing & Pipeline Architecture**
   * Details the dataset profiles, structural transformations, addressing the anomalous negative metric for User #36, and features normalization workflows.
   * Displays the Elbow Curve chart justifying selecting $K=3$ clusters.
-* **Slide 2: Behavioral Persona Discovery Matrix**
-  * Breaks down the quantitative differences between *Dedicated Enthusiasts*, *Long-Session Casuals*, and *Fast & Light Users*.
+
+* **Slide 3: Behavioral Persona Discovery Matrix**
+  * Breaks down the quantitative differences between *Dedicated Enthusiasts* (Cluster 0), *Long-Session Casuals* (Cluster 1), and *Fast & Light Users* (Cluster 2).
   * Highlights how engagement rates directly inversely correlate with the recorded user churn metrics.
-* **Slide 3: Strategic Value & Marketing Retention Roadmap**
-  * **Retaining Cluster 1 & 2 (20% Churn):** Prescribes targeted push notifications mid-week encouraging quick milestone accomplishments and short-burst fitness content to bridge their lower workout frequencies.
+
+* **Slide 4: Strategic Value & Marketing Retention Roadmap**
+  * **Retaining Cluster 1 & 2 (20.00% Churn):** Prescribes targeted push notifications mid-week encouraging quick milestone accomplishments and short-burst fitness content to bridge their lower workout frequencies.
   * **Leveraging Cluster 0 (7.06% Churn):** Outlines customer-advocacy premium conversion schemes to upsell subscription frameworks to our most highly active users.
+
+* **Slide 5: Executive Conclusions & ROI Impact**
+  * Summarizes the strategic takeaways of shifting from a "one-size-fits-all" model to localized feature prioritization.
+  * Highlights a projected **-12% churn reduction** across the application ecosystem by successfully deploying these targeted behavioral interventions.
 
 ---
 
