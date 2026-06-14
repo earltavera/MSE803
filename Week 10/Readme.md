@@ -74,6 +74,7 @@ While **Polynomial Degree 3** achieves the lowest error inside the validation pa
 ## 🛠 Prerequisites
 To run this repository in your local system, configure the environment with these required packages:
 
+```python
 pip install numpy pandas scikit-learn matplotlib
 ---
 ## 💻 Implementation Code
