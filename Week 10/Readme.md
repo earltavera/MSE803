@@ -71,7 +71,11 @@ When prompting the models to predict salaries outside the original training maxi
 While **Polynomial Degree 3** achieves the lowest error inside the validation partition, it fails the real-world logic test during extrapolation. Because cubic expressions ($X^3$) can bend erratically beyond data boundaries, it incorrectly predicts that a person with 15 years of experience earns *less* than someone with 14 years. **Polynomial Degree 2** yields a highly accurate curve while maintaining a realistic, upward-trending career salary growth.
 
 ---
+## 🛠 Prerequisites
+To run this repository in your local system, configure the environment with these required packages:
 
+pip install numpy pandas scikit-learn matplotlib
+---
 ## 💻 Implementation Code
 
 Below is the structured execution script optimized for **Jupyter Notebooks**:
@@ -80,7 +84,4 @@ Below is the structured execution script optimized for **Jupyter Notebooks**:
 import numpy as np
 import pandas
 
-🛠 Prerequisites
-To run this repository in your local system, configure the environment with these required packages:
 
-pip install numpy pandas scikit-learn matplotlib
