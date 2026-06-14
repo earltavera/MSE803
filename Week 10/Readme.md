@@ -83,5 +83,4 @@ import pandas
 🛠 Prerequisites
 To run this repository in your local system, configure the environment with these required packages:
 
-```python
 pip install numpy pandas scikit-learn matplotlib
