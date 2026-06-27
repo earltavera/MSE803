@@ -1,0 +1,11 @@
+,Linear Regression,XGBoost (GBM),LSTM,ANN,"ARIMA(1,1,1)"
+Life Satisfaction Mean,7.667,7.7,7.767,7.675,7.705
+Life Worthwhile Mean,8.1,8.1,8.1,8.077,8.1
+Financial Inadequacy (%),8.933,10.006,11.139,9.147,8.834
+Health Excellent (%),13.967,16.513,19.079,14.466,13.934
+Loneliness None (%),58.8,61.004,61.706,59.138,60.827
+Generalised Trust Low (%),10.0,9.696,8.998,9.792,9.112
+Job Very Satisfied (%),23.667,27.027,32.288,24.429,25.686
+Housing Problems (%),22.333,22.097,21.431,22.122,21.418
+Cultural Belonging (%),49.0,50.305,51.305,49.24,49.994
+Feel Safe Home (%),62.167,61.896,61.164,61.937,61.214
