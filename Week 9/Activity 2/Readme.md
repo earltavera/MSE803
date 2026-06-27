@@ -1,6 +1,6 @@
 ---
 
-# 📖 Preview of `README.md`
+# 📖 Activity 2`
 
 # Student Knowledge Level Modeling: End-to-End Analysis
 
