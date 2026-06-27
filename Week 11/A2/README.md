@@ -37,7 +37,7 @@ Forecasting the next year (2020) of New Zealand wellbeing indicators using five 
 
 > **Note:** LSTM and ANN are implemented from scratch in NumPy — no TensorFlow or PyTorch required.
 
-
+## Visualizations
 <img width="2236" height="740" alt="01_model_comparison" src="https://github.com/user-attachments/assets/d23c4a4f-8deb-4046-8e5d-650bce0f9278" />
 <img width="2382" height="1328" alt="02_life_satisfaction_all_models" src="https://github.com/user-attachments/assets/1d7394a4-59a9-4b19-9d04-55db6c834919" />
 <img width="3285" height="1370" alt="03_all_indicators_forecast" src="https://github.com/user-attachments/assets/860378e1-c520-4958-95e1-b5ba7b027187" />
