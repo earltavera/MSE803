@@ -1,8 +1,8 @@
 ---
 
-# 📖 Activity 2`
+# 📖 Week 9 Activity 2
 
-# Student Knowledge Level Modeling: End-to-End Analysis
+# User Knowledge Level Modeling: End-to-End Analysis
 
 An end-to-end Machine Learning and Data Analysis project leveraging the **User Modeling Dataset** to investigate student study habits, segment learners, and build highly accurate classification pipelines to predict academic knowledge levels.
 
@@ -49,7 +49,9 @@ Data hygiene protocols were executed prior to exploratory and predictive modelin
 ## 📊 Exploratory Data Analysis (EDA)
 
 * **Behavioral Independence**: Time investments (`STG`, `SCG`, `STR`) display near-zero linear correlation with each other ($r < 0.08$). Learners exhibit diverse study personas—high repetition does not imply high initial study duration.
-* **The Assessment Anchor**: Exam performances (`PEG` and `LPR`) show the strongest direct separation across target classes. 
+* **The Assessment Anchor**: Exam performances (`PEG` and `LPR`) show the strongest direct separation across target classes.
+  <img width="2400" height="1500" alt="class_distribution" src="https://github.com/user-attachments/assets/471f2955-8495-4a3e-abc8-48fd4316dda8" />
+
 
 ---
 
@@ -63,6 +65,8 @@ Features were standardized via $z$-score normalization ($\mu=0, \sigma=1$). Opti
 * $k=5$: **`0.183` (Optimal Geometric Separation)**
 
 Mapping unsupervised $k=4$ Euclidean clusters against true nominal labels revealed significant boundary overlap, confirming that student proficiency operates on complex, non-linear competency thresholds rather than simple spatial density.
+<img width="4200" height="1800" alt="clustering_comparison" src="https://github.com/user-attachments/assets/194699eb-97df-4c0f-b6ae-0aaea6a55560" />
+
 
 ### 2. Supervised Classification Modeling
 Using the predefined split (258 Train / 145 Test), four distinct predictive engines were trained and evaluated:
